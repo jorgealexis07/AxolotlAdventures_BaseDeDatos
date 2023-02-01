@@ -2,7 +2,6 @@ package axolotl.spring.AxolotlDB.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,16 +50,24 @@ private final ClientesService clientesService;
 		return clientesService.addClientes(clientes);
 	}//addClientes
 	
-	@PutMapping (path="{Id_Clientes}") // http://localhost:8080/api/clientes/1
-	public Clientes updateClientes(@PathVariable("Id_Clientes") Long id_Clientes,
+	 @PutMapping (path="{Id_Clientes}") // http://localhost:8080/api/clientes/1
+	 public Clientes updateClientes(@PathVariable("Id_Clientes") Long id_Clientes,
 			@RequestParam(required=false) String nom_cliente,
 			@RequestParam(required=false) String app_cliente,
 			@RequestParam(required=false) String email_cliente,
 			@RequestParam(required=false) String cel_cliente,
 			@RequestParam(required=false) String contr_cliente,
 			@RequestBody ChangeContr_cliente changeContr_cliente) {
-		    return clientesService.updateClientes(id_Clientes, nom_cliente, app_cliente, email_cliente, cel_cliente, contr_cliente, changeContr_cliente.getContr_cliente());
-	}//updateClientes
+		   return clientesService.updateClientes(id_Clientes, nom_cliente, app_cliente, email_cliente, cel_cliente, contr_cliente, changeContr_cliente.getContr_cliente());
+	 }//updateClientes
+	
+	//@PutMapping (path= "{Id_Clientes}") // http://localhost:8080/api/clientes/1
+	//public Clientes updateClientes(@PathVariable("Id_Clientes") Long id_Clientes,
+		//	@RequestBody ChangeContr_cliente changeContr_cliente) {
+		//return clientesService.updateClientes(id_Clientes, changeContr_cliente.getContr_cliente(),
+			//	changeContr_cliente.getNewContr_cliente());
+	//}
+
+ }//UsuarioController
 			
 
-}//Class ClientesController

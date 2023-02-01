@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ClientesRepository extends JpaRepository <Clientes, Long>{
 
-	@Query("SELECT u From Usuario u WHERE u.email=?1") // JPQL
+	@Query("SELECT u FROM Clientes u WHERE u.email_cliente=?1") // JPQL
 	Optional<Clientes> findByEmail(String email_cliente);
 
 }
