@@ -1,12 +1,13 @@
-package axolotl.spring.AxolotlDB.controller.service;
+package axolotl.spring.AxolotlDB.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import axolotl.spring.AxolotlDB.controller.model.Clientes;
+import axolotl.spring.AxolotlDB.model.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class ClientesService {
@@ -27,6 +28,7 @@ public class ClientesService {
 				);
 		
 	}//getClientes
+	
 	public Clientes deleteClientes(Long id_Clientes) {
 		Clientes tmp=null;
 		if(clientesRepository.existsById(id_Clientes)){
@@ -41,9 +43,10 @@ public class ClientesService {
 	}//addClientes
 	
 	
+
 	//Duda... lo mismo de la numeración de ID's
 	public Clientes updateClientes(Long id_Clientes, String nom_cliente, String app_cliente, String email_cliente, 
-		   String cel_cliente, String contr_cliente, String newContr_cliente) {
+		   String cel_cliente, String contr_cliente) {
 		Clientes tmp=null;
 		if(clientesRepository.existsById(id_Clientes)){
 			tmp=clientesRepository.findById(id_Clientes).get();
@@ -51,12 +54,7 @@ public class ClientesService {
 			if (app_cliente!=null) tmp.setApp_cliente(app_cliente);
 			if (email_cliente!=null) tmp.setEmail_cliente(email_cliente);
 			if (cel_cliente!=null) tmp.setCel_cliente(cel_cliente);
-			if ((contr_cliente!=null) && (newContr_cliente!=null)) {
-			    if(contr_cliente.equals(tmp.getContr_cliente())) {
-			    	tmp.setContr_cliente(newContr_cliente);
-			    	clientesRepository.save(tmp);
-			    }//if contr_cliente
-			}//if !null
+			if (contr_cliente!=null) tmp.setContr_cliente(contr_cliente);
 			
 			clientesRepository.save(tmp);
 		}else {

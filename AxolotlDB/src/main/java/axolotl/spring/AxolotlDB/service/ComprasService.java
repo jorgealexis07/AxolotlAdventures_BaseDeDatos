@@ -1,8 +1,8 @@
-package axolotl.spring.AxolotlDB.controller.service;
+package axolotl.spring.AxolotlDB.service;
 
 import java.util.List;
 
-import axolotl.spring.AxolotlDB.controller.model.Compras;
+import axolotl.spring.AxolotlDB.model.Compras;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service

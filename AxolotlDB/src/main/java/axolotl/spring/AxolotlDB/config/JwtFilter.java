@@ -1,4 +1,4 @@
-package axolotl.spring.AxolotlDB.controller.config;
+package axolotl.spring.AxolotlDB.config;
 
 
 import java.io.IOException;

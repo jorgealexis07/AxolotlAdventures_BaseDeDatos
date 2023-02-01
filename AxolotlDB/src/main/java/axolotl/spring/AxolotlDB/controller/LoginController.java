@@ -6,10 +6,10 @@ import java.util.Date;
 
 import javax.servlet.ServletException;
 
-import axolotl.spring.AxolotlDB.controller.config.JwtFilter;
-import axolotl.spring.AxolotlDB.controller.model.Token;
-import axolotl.spring.AxolotlDB.controller.model.Clientes;
-import axolotl.spring.AxolotlDB.controller.service.ClientesService;
+import axolotl.spring.AxolotlDB.config.JwtFilter;
+import axolotl.spring.AxolotlDB.model.Token;
+import axolotl.spring.AxolotlDB.model.Clientes;
+import axolotl.spring.AxolotlDB.service.ClientesService;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

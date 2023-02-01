@@ -1,4 +1,4 @@
-package axolotl.spring.AxolotlDB.controller.model;
+package axolotl.spring.AxolotlDB.model;
 
 public class ChangeContr_cliente {
 

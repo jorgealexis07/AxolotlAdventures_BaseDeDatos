@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import axolotl.spring.AxolotlDB.controller.model.Actividades;
-import axolotl.spring.AxolotlDB.controller.service.ActividadesService;
+import axolotl.spring.AxolotlDB.model.Actividades;
+import axolotl.spring.AxolotlDB.service.ActividadesService;
 
 @RestController
 @RequestMapping(path="/api/actividades/")

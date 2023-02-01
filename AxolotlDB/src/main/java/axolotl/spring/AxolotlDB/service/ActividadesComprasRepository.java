@@ -1,8 +1,8 @@
-package axolotl.spring.AxolotlDB.controller.service;
+package axolotl.spring.AxolotlDB.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import axolotl.spring.AxolotlDB.controller.model.Actividades_has_Compras;
+import axolotl.spring.AxolotlDB.model.Actividades_has_Compras;
 
 public interface ActividadesComprasRepository  extends JpaRepository <Actividades_has_Compras, Long> {
 

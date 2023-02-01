@@ -1,4 +1,4 @@
-package axolotl.spring.AxolotlDB.controller.config;
+package axolotl.spring.AxolotlDB.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

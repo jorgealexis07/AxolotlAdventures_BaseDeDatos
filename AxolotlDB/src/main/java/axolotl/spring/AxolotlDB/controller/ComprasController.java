@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import axolotl.spring.AxolotlDB.controller.model.Compras;
-import axolotl.spring.AxolotlDB.controller.service.ComprasService;
+import axolotl.spring.AxolotlDB.model.Compras;
+import axolotl.spring.AxolotlDB.service.ComprasService;
 
 @RestController
 @RequestMapping(path="/api/compras/")

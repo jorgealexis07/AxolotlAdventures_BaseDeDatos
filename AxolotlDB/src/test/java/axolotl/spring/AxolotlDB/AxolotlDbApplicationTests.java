@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 
-import axolotl.spring.AxolotlDB.controller.model.Actividades;
+import axolotl.spring.AxolotlDB.model.Actividades;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;

@@ -1,6 +1,6 @@
 package axolotl.spring.AxolotlDB;
 
-import axolotl.spring.AxolotlDB.controller.config.JwtFilter;
+import axolotl.spring.AxolotlDB.config.JwtFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

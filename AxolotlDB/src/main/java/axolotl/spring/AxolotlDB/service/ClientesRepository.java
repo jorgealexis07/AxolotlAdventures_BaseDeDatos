@@ -1,8 +1,8 @@
-package axolotl.spring.AxolotlDB.controller.service;
+package axolotl.spring.AxolotlDB.service;
 
 import java.util.Optional;
 
-import axolotl.spring.AxolotlDB.controller.model.Clientes;
+import axolotl.spring.AxolotlDB.model.Clientes;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
