@@ -42,7 +42,7 @@ private final ClientesService clientesService;
 	
 	@DeleteMapping(path="{Id_Clientes}")  // http://localhost:8080/api/clientes/1
 	public Clientes deleteClientes(@PathVariable("Id_Clientes") Long id_Clientes) {
-		return clientesService.getClientes(id_Clientes);
+		return clientesService.deleteClientes(id_Clientes);
 	}//deleteClientes
 	
 	@PostMapping

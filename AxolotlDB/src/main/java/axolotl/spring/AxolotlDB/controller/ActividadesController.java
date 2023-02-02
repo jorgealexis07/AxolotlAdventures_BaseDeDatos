@@ -34,14 +34,14 @@ private final ActividadesService actividadesService;
 		return actividadesService.getAllActividades();
 	}//getAllActividades
 	
-	@GetMapping(path="{Id_actividades}")  // http://localhost:8080/api/actividades/1
-	public Actividades getActividades(@PathVariable("id_actividades") Long id_actividades) {
-		return actividadesService.getActividades(id_actividades);
+	@GetMapping(path="{Id_Actividades}")  // http://localhost:8080/api/actividades/1
+	public Actividades getActividades(@PathVariable("Id_Actividades") Long id_Actividades) {
+		return actividadesService.getActividades(id_Actividades);
 	}//getActividades
 	
-	@DeleteMapping(path="{Id_actividades}")  // http://localhost:8080/api/actividades/1
-	public Actividades deleteActividades(@PathVariable("id_actividades") Long id_actividades) {
-		return actividadesService.getActividades(id_actividades);
+	@DeleteMapping(path="{Id_Actividades}")  // http://localhost:8080/api/actividades/1
+	public Actividades deleteActividades(@PathVariable("Id_Actividades") Long id_Actividades) {
+		return actividadesService.deleteActividades(id_Actividades);
 	}//deleteActividades
 	
 	@PostMapping
@@ -49,13 +49,14 @@ private final ActividadesService actividadesService;
 		return actividadesService.addActividades(actividades);
 	}//addActividades
 	
-	@PutMapping (path="{Id_actividades}") // http://localhost:8080/api/productos/1
-	public Actividades updateActividades(@PathVariable("Id_actividades") Long id_actividades,
+	@PutMapping(path="{Id_Actividades}") // http://localhost:8080/api/actividades/1
+	public Actividades updateActividades(@PathVariable("Id_Actividades") Long id_Actividades, 
 			@RequestParam(required=false) String nom_actv,
 			@RequestParam(required=false) String descrip_actv,
+			@RequestParam(required=false) String resumen_actv,
 			@RequestParam(required=false) String img_actv,
-			@RequestParam(required=false) int precio_actv) {
-		    return actividadesService.updateActividades(id_actividades, nom_actv, descrip_actv, img_actv, precio_actv);
+			@RequestParam(required=false) Double precio_actv) {
+		    return actividadesService.updateActividades(id_Actividades, nom_actv, descrip_actv, resumen_actv,  img_actv, precio_actv);
 	}//updateActividades
 			
 

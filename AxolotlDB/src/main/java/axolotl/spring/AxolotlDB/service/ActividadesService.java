@@ -25,6 +25,7 @@ public class ActividadesService {
 				);
 		
 	}//getActividades
+	
 	public Actividades deleteActividades(Long id_Actividades) {
 		Actividades tmp=null;
 		if(actividadesRepository.existsById(id_Actividades)){
@@ -38,15 +39,16 @@ public class ActividadesService {
 		return actividadesRepository.save(actividades);
 	}//addActividades
 	
-	public Actividades updateActividades(Long id_Actividades, String nom_actv, String descrip_actv, 
-			String img_actv, int precio_actv) {
+	public Actividades updateActividades(Long id_Actividades, String nom_actv, String descrip_actv, String resumen_actv, 
+			String img_actv, Double precio_actv) {
 		Actividades tmp=null;
 		if(actividadesRepository.existsById(id_Actividades)){
 			tmp=actividadesRepository.findById(id_Actividades).get();
 			if (nom_actv!=null) tmp.setNom_actv(nom_actv);
 			if (descrip_actv!=null) tmp.setDescrip_actv(descrip_actv);
+			if (resumen_actv!=null) tmp.setDescrip_actv(resumen_actv);
 			if (img_actv!=null) tmp.setImg_actv(img_actv);
-			if (precio_actv!=0) tmp.setPrecio_actv(precio_actv);
+			if (precio_actv!=null) tmp.setPrecio_actv(precio_actv.doubleValue());
 			actividadesRepository.save(tmp);
 		}else {
 			System.out.println("Update - La actividad con el id " + id_Actividades +

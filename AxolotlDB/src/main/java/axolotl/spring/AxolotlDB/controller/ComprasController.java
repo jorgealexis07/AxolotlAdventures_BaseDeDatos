@@ -41,7 +41,7 @@ private final ComprasService comprasService;
 	
 	@DeleteMapping(path="{Id_ComprasClientes}")  // http://localhost:8080/api/compras/1
 	public Compras deleteCompras(@PathVariable("Id_ComprasClientes") Long id_ComprasClientes) {
-		return comprasService.getCompras(id_ComprasClientes);
+		return comprasService.deleteCompras(id_ComprasClientes);
 	}//deleteCompras
 	
 	@PostMapping
@@ -51,10 +51,10 @@ private final ComprasService comprasService;
 	
 	@PutMapping (path="{Id_ComprasClientes}") // http://localhost:8080/api/compras/1
 	public Compras updateCompras(@PathVariable("Id_ComprasClientes") Long id_ComprasClientes,
-			@RequestParam(required=false) String date_Compras,
+			@RequestParam(required=false) String date_compras,
 			@RequestParam(required=false) int numpx_actv,
-			@RequestParam(required=false) int precio_total) {
-		    return comprasService.updateCompras(id_ComprasClientes, date_Compras, numpx_actv, precio_total);
+			@RequestParam(required=false) Double precio_total) {
+		    return comprasService.updateCompras(id_ComprasClientes, date_compras, numpx_actv, precio_total);
 	}//updateCompras
 			
 

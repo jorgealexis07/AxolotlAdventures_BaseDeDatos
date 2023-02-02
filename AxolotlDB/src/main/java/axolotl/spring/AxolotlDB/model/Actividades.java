@@ -19,12 +19,14 @@ public class Actividades {
 	@Column(nullable=false)
 	private String nom_actv;
 	private String descrip_actv;
+	private String resumen_actv;
 	private String img_actv;
-	private int precio_actv;
-	public Actividades(String nom_actv, String descrip_actv, String img_actv, int precio_actv) { 
+	private double precio_actv;
+	public Actividades(String nom_actv, String descrip_actv, String img_actv, double precio_actv, String resumen_actv) { 
       super();
       this.nom_actv=nom_actv;
       this.descrip_actv=descrip_actv;
+      this.resumen_actv=resumen_actv;
       this.img_actv=img_actv;
       this.precio_actv=precio_actv;
 
@@ -35,7 +37,17 @@ public class Actividades {
 	public Long getId_actividades() {
 		return id_Actividades;
 	}
+	
+	
 
+
+	public String getResumen_actv() {
+		return resumen_actv;
+	}
+
+	public void setResumen_actv(String resumen_actv) {
+		this.resumen_actv = resumen_actv;
+	}
 
 	public String getNom_actv() {
 		return nom_actv;
@@ -61,11 +73,11 @@ public class Actividades {
 		this.img_actv = img_actv;
 	}
 
-	public int getPrecio_actv() {
+	public double getPrecio_actv() {
 		return precio_actv;
 	}
 
-	public void setPrecio_actv(int precio_actv) {
+	public void setPrecio_actv(double precio_actv) {
 		this.precio_actv = precio_actv;
 	}
 	
