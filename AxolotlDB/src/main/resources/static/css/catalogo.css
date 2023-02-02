@@ -1,0 +1,82 @@
+.btn {
+  background: #e23d82;
+  color: white;
+  border: 0px;
+
+}
+
+/*boton de ver más color violeta*/ 
+.swal2-confirm.custom-confirm-button-class {  
+  background-color: #e23d82;
+}
+
+
+@media (max-width: 1024px) {
+  .position-absolute {
+    width: 30%;
+    height: 1%;
+
+  }
+}
+
+.card-text {
+  text-align: justify;
+}
+
+/*Alineacion del texto de las cards de productos*/
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+/*Efecto de zoom de las cards y caruseles, fucniona al dar el primer click*/
+
+.carousel-item>img {
+  -webkit-animation: zoom 20s;
+  animation: zoom 20s;
+}
+
+.precio {
+  margin-left: 70%;
+
+
+}
+
+/*Alinea el testo de price con class precio a la izquierda*/
+.card-text1 {
+  margin: auto;
+
+}
+
+/*Alineacion del texto de paquetes*/
+.descripcion {
+  text-align: justify;
+  margin: 2em;
+}
+
+.modal-title {
+  text-align: justify;
+}
+
+/*Acomoda encabezado de paquetes*/
+.container {
+  margin-top: 30px;
+}
+
+/*margen general de la pagina y las cards
+  */

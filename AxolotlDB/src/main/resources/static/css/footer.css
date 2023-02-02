@@ -1,0 +1,23 @@
+/* Estilos de el footer */
+body{
+    margin: 0;
+    position: relative;
+    padding-bottom: 3em;
+    display: flex;
+	flex-direction: column;
+    min-height: 100vh;
+  }
+  
+footer{
+    padding: 1em 0;
+    background-color:  #1b89d3;
+    position: absolute;
+    width: 100%;
+    margin-top: auto;
+    right: 0;
+    left: 0;
+      
+}
+.link-fu{
+    color: white;
+}

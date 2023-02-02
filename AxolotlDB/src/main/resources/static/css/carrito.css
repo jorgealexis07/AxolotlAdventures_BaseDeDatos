@@ -1,0 +1,63 @@
+img{
+    width: auto ; 
+    height: auto;
+}
+h2{
+    color:#e23d82;
+    font-weight: bold;
+}
+
+.cont{
+   margin: 20px;
+   padding: 20px;
+}
+#btnClear{
+    background-color: #e23d82;
+     color: aliceblue;
+     border-style: none;
+    }
+    #btnComprar{
+     background-color: #e23d82;
+    color: aliceblue;
+    border-style: none;
+    
+    }
+    #btnRegresar{
+        background-color: #e23d82;
+       color: aliceblue;
+       border-style: none;
+       
+       }
+       
+
+       @media (max-width:650px) and (min-width:200px) {
+        #log{
+       position:center;
+       width:  100%;
+      height: 100%;
+       
+        }
+        }
+       
+        @media (max-width:650px) and (min-width:200px) {
+        .needs-validation  {
+       
+        width:  100%;
+        height: 100%;
+       
+        }
+        }
+        @media (max-width:600px) and (min-width:400px) {
+            .btn-primary{
+           font-size: 15px;
+           margin: 2px;
+            }
+            }
+       
+                
+        @media (max-width:400px) and (min-width:200px) {
+            .btn-primary{
+           font-size: 10px;
+           margin: 2px;
+            }
+            }
