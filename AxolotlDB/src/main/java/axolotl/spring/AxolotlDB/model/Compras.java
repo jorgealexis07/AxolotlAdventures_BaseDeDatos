@@ -17,12 +17,12 @@ public class Compras {
 	@Column(name="id_ComprasClientes", unique=true, nullable=false)
 	private Long id_ComprasClientes;
 	@Column(nullable=false)
-	private String date_Compras;
+	private String date_compras;
 	private int numpx_actv;
-	private int precio_total;
-	public Compras(String date_Compras, int numpx_actv, int precio_total) { 
+	private double precio_total;
+	public Compras(String date_compras, int numpx_actv, double precio_total) { 
       super();
-      this.date_Compras=date_Compras;
+      this.date_compras=date_compras;
       this.numpx_actv=numpx_actv;
       this.precio_total=precio_total;
  
@@ -34,12 +34,14 @@ public class Compras {
 		return id_ComprasClientes;
 	}
 
-	public String getDate_Compras() {
-		return date_Compras;
+	
+
+	public String getDate_compras() {
+		return date_compras;
 	}
 
-	public void setDate_Compras(String date_Compras) {
-		this.date_Compras = date_Compras;
+	public void setDate_compras(String date_compras) {
+		this.date_compras = date_compras;
 	}
 
 	public int getNumpx_actv() {
@@ -50,11 +52,11 @@ public class Compras {
 		this.numpx_actv = numpx_actv;
 	}
 
-	public int getPrecio_total() {
+	public double getPrecio_total() {
 		return precio_total;
 	}
 
-	public void setPrecio_total(int precio_total) {
+	public void setPrecio_total(double precio_total) {
 		this.precio_total = precio_total;
 	}
 	

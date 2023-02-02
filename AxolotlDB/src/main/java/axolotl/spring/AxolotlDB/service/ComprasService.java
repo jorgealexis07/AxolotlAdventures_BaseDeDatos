@@ -40,13 +40,13 @@ public class ComprasService {
 	
 	//Duda.... Double es minúscula o mayúscula?
 	//Duda2... en vez de null el 0
-	public Compras updateCompras(Long id_ComprasClientes, String date_Compras, int numpx_actv, int precio_total) {
+	public Compras updateCompras(Long id_ComprasClientes, String date_compras, int numpx_actv, Double precio_total) {
 		Compras tmp=null;
 		if(comprasRepository.existsById(id_ComprasClientes)){
 			tmp=comprasRepository.findById(id_ComprasClientes).get();
-			if (date_Compras!=null) tmp.setDate_Compras(date_Compras);
+			if (date_compras!=null) tmp.setDate_compras(date_compras);
 			if (numpx_actv!=0) tmp.setNumpx_actv(numpx_actv);
-			if (precio_total!=0) tmp.setPrecio_total(precio_total);
+			if (precio_total!=null) tmp.setPrecio_total(precio_total.doubleValue());
 			comprasRepository.save(tmp);
 		}else {
 			System.out.println("Update - La compra con el id " + id_ComprasClientes +
