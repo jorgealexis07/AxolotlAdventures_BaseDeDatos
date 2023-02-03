@@ -223,7 +223,7 @@ form.addEventListener("submit", (e) => {
     };
     //data.push(producto);
     //METODO POST 
-    fetch("http://localhost:8080/api/actividades/", {
+    fetch("https://axolotladventuresbasededatos-production.up.railway.app/api/actividades/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

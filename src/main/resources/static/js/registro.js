@@ -47,7 +47,7 @@ btnEnviar.addEventListener("click", function (event) {
       telefono: inputTel.value,
       password: inputPassword.value,
     });
-	   fetch("http://127.0.0.1:8080/api/clientes/", {
+	   fetch("https://axolotladventuresbasededatos-production.up.railway.app/api/clientes/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

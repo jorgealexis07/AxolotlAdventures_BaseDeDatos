@@ -9,7 +9,7 @@ let costoTotal=0;
 let cantidad =1;
 
 
-fetch("http://localhost:8080/api/actividades/").then((res)=> {
+fetch("https://axolotladventuresbasededatos-production.up.railway.app/api/actividades/").then((res)=> {
 	if(res.status == "200"){
 		console.log(res);
 		return res.json();

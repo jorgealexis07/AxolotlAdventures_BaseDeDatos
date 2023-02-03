@@ -40,7 +40,7 @@ btnIniciar.addEventListener("click", function (event) {
   }*/
   
   //METODO POST 
-    fetch("http://localhost:8080/api/login/", {
+    fetch("https://axolotladventuresbasededatos-production.up.railway.app/api/login/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
