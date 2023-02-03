@@ -30,7 +30,7 @@ function menu() {
           <a aria-current="page" href="/html/contacto.html" class="nave-menudo-link navegador-link">Contacto</a>
         </li>
         <li class="nav-item">
-          <a aria-current="page" href="/html/aboutus.html" class="nave-menudo-link navegador-link">Nosotros</a>
+          <a aria-current="page" href="/html/aboutUs.html" class="nave-menudo-link navegador-link">Nosotros</a>
         </li>
 	 <li class="nav-item">
           <a aria-current="page" href="/html/registro.html" class="nave-menudo-link navegador-link">Registrarse</a>
