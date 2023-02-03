@@ -227,6 +227,7 @@ form.addEventListener("submit", (e) => {
       method: "post",
       headers: {
         "Content-Type": "application/json",
+        "Authorization":"Bearer: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFyZXpAaG90bWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY3NTQzMjI2NiwiZXhwIjoxNjc1NDY4MjY2fQ.UYz0FFwp4ksvHRmnaNmfe2-yaLj-9gDxQEInPVaTYTA"
       },
       body: JSON.stringify({
 		    "nom_actv": nombre, 
