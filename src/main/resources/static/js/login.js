@@ -40,11 +40,11 @@ btnIniciar.addEventListener("click", function (event) {
   }*/
   
   //METODO POST 
-    fetch("https://axolotladventuresbasededatos-production.up.railway.app/api/login/", {
+    fetch("/api/login/", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9jbGllbnRlIjoianVhcmV6QGhvdG1haWwuY29tIiwiY29udHJfY2xpZW50ZSI6Ikp1YW5pdG8yNyJ9.GCaGTpEUfEKQpS-Rpj8eq9tQHJHurdulo0BfkF4nhYk"
+        "Authorization": "Bearer: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF9jbGllbnRlIjoianVhcmV6QGhvdG1haWwuY29tIiwiY29udHJfY2xpZW50ZSI6Ikp1YW5pdG8yNyJ9.GCaGTpEUfEKQpS-Rpj8eq9tQHJHurdulo0BfkF4nhYk"
       },
       body: JSON.stringify({
 		    "email_cliente": inputEmail.value,
