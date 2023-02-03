@@ -1,0 +1,128 @@
+.container_1{
+    width:400px;
+    height:550px; 
+    left: 890px;
+    top: 248px; 
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin-bottom:100px ;
+    position: center; 
+  /*  margin-left: 350px;*/
+          
+}
+@media (max-width:500px) and (min-width:200px) {
+    .container_1{
+        width: auto;
+        height: 70%;
+      position: center;
+      position: relative; left: -0px; top: 10px; 
+      margin-bottom: 10px;
+       /* margin-left: -350px;*/
+               }
+        }
+
+
+@media (max-width:1000px) and (min-width:500px) {
+    .container_1{
+        width:  70%;
+        height: 300%;
+        margin-bottom: 0px;
+        position: center;
+        position: relative; left: 100px;  top: 150px; 
+        
+       
+     
+                }
+    }
+    @media (max-width:1200px) and (min-width:1000px) {
+        .container_1{
+            width:  50%;
+            height: 200%;
+            margin-bottom: 150px;
+            position: relative;  left: 230px;  top:50px; 
+         
+           
+         
+                    }
+        }
+        @media (max-width:1400px) and (min-width:1200px) {
+            .container_1{
+                width:  50%;
+                height: 200%;
+                margin-bottom: 10%;
+                position: relative; left:320px; top: 100px; 
+             
+                        }
+            }
+        @media (max-width:1600px) and (min-width:1400px) {
+            .container_1{
+                width:  50%;
+                height: 200%;
+                margin-bottom: 10%;
+                margin-top: 150px;
+                position: relative;  left: 330px;  top: 10px; 
+             
+               
+             
+                        }
+            }
+            @media (max-width:2400px) and (min-width:1600px) {
+                .container_1{
+                    width:  50%;
+                    height: 200%;
+                    margin-bottom: 10%;
+                    margin-top: 150px;
+                    position: relative;  left: 330px;  top: 10px; 
+                 
+                   
+                 
+                            }
+                }
+
+.Titulo {
+    font-size: 30px;
+    margin-bottom:50px;
+    color:#e23d82;
+    position: center;
+    }
+    @media (max-width:500px) and (min-width:200px) {
+       .Titulo{
+           font-size: 20px;
+                  }
+           }
+
+.btn{
+    background-color: #e23d82;
+    color: aliceblue;
+    width: 100px;
+    margin-left: 10px;
+}
+
+
+
+
+body{
+    background: url("/fotos/Fondos/peakpx.jpg") ;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.h2{
+   font-size: 40px;
+    margin-bottom:20px;
+    color: #e23d82;
+}
+
+@media (max-width:500px) and (min-width:1600px) {
+   body {
+       background-image:  url("/fotos/Fondos/peakpx.jpg") ;
+       
+   }
+}
+@media (max-width:500px) and (min-width:200px) {
+   body {
+       background-image:  url("/fotos/Fondos/peakpx.jpg") ;
+       
+   }
+}

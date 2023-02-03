@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import axolotl.spring.AxolotlDB.model.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 

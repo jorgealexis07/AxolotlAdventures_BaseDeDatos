@@ -15,9 +15,10 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureException;
 
-public class JwtFilter extends GenericFilter {
 
-	public static final String secret = "lalala";
+public class JwtFilter extends GenericFilter{
+
+	public static final String secret = "CH21-dramaticos-unid0s-inf13l3s#RBDvsBTS";
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -47,7 +48,10 @@ public class JwtFilter extends GenericFilter {
 		}// if methods
 
 		chain.doFilter(request, response);
-		
+
+
 }
 		
+	
+
 }//class JwtFilter
