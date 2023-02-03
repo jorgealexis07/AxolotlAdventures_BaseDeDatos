@@ -13,7 +13,7 @@ let errors = [];
 let url_img = "";
 
 //productos (objeto) de lista
-let data = [
+/*let data = [
   {
     id: 1,
     title: "Bernal",
@@ -146,7 +146,7 @@ let data = [
     text: "Recorrido turístico en Guadalajara para conocer la ciudad. Se inicia conociendo la zona de La Minerva, Los Arcos de Guadalajara, el impresionante puente atirantado “Puente Matute Remus, para luego circular por la zona más exclusiva de Guadalajara en el siglo XVIII. Paramos en una de las iglesias más bellas de la Perla Tapatía: El Expiatorio, donde después de una reseña de la historia conoceremos su interior. Diviértete en el parían del nuevo Pueblo Mágico de Tlaquepaque, lugar de bellas artesanías, galerías y restaurantes, compra souvenirs tradicionales de la región.",
   },
 ];
-localStorage.setItem("producto", JSON.stringify(data));
+localStorage.setItem("producto", JSON.stringify(data));*/
 
 let error = false;
 
@@ -205,12 +205,12 @@ form.addEventListener("submit", (e) => {
     input.classList.remove("is-invalid");
   }, 1000);
   if (!error) {
-    data = JSON.parse(localStorage.getItem("producto"));
-    let contador = data.length + 1;
-    console.log(contador);
+    //data = JSON.parse(localStorage.getItem("producto"));
+    //let contador = data.length + 1;
+    //console.log(contador);
     // Create a new object to store the data
     const producto = {
-      id: contador,
+     // id: contador,
       title: nombre,
       resume: comentario,
       images: [
@@ -221,10 +221,32 @@ form.addEventListener("submit", (e) => {
       price: precio,
       text: DescripcionActividad,
     };
-    data.push(producto);
-    localStorage.removeItem("producto");
+    //data.push(producto);
+    //METODO POST 
+    fetch("http://localhost:8080/api/actividades/", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+		    "nom_actv": nombre, 
+    		"descrip_actv":comentario, 
+    		"img_actv": imagen, 
+    		"precio_actv":precio,
+    		"resumen_actv":DescripcionActividad
+      })
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+    
+    //localStorage.removeItem("producto");
     // Guardar el objeto en Local Storage
-    localStorage.setItem("producto", JSON.stringify(data));
+    //localStorage.setItem("producto", JSON.stringify(data));
     // Mostrar una alerta de éxito
     //document.getElementById("alert-success").innerHTML = "Registro exitoso";
     //document.getElementById("alert-success").style.display = "block";

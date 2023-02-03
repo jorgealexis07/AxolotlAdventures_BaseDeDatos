@@ -22,7 +22,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 
 @RestController
-@RequestMapping(path="/api/Login/")
+@RequestMapping(path="/api/login/")
 
 public class LoginController {
 
@@ -33,7 +33,7 @@ public class LoginController {
 	}//constructor
 
 	@PostMapping
-	public Token login (@RequestBody Clientes clientes) throws ServletException {
+	public Token login(@RequestBody Clientes clientes) throws ServletException {
 		if (clientesService.validaClientes(clientes)) {
 			return new Token(generateToken(clientes.getEmail_cliente()));
 		}//if
