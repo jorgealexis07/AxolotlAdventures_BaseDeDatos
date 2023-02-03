@@ -22,7 +22,7 @@ public class Actividades {
 	private String descrip_actv;
 	@Column(length = 500)
 	private String resumen_actv;
-	@Column(length = 200)
+	@Column(length = 500)
 	private String img_actv;
 	private double precio_actv;
 	public Actividades(String nom_actv, String descrip_actv, String img_actv, double precio_actv, String resumen_actv) { 
