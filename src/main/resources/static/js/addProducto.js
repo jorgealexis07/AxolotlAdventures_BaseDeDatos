@@ -244,12 +244,11 @@ form.addEventListener("submit", (e) => {
 
         
       }
+      else{
+        console.error("Error:", error);
+      }
     })
-    .catch((error) => {
-      console.error("Error:", error);
-      
-    });
-    
+   
     //localStorage.removeItem("producto");
     // Guardar el objeto en Local Storage
     //localStorage.setItem("producto", JSON.stringify(data));
