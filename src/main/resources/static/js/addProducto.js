@@ -241,11 +241,19 @@ form.addEventListener("submit", (e) => {
     .then((data) => {
       if (data.status==200) {
         console.log("Success:", data);
-
-        
+        setTimeout(function () {
+          //document.getElementById("alert-success").style.display = "none";
+          Swal.fire("¡Registrado exitosamente!", "", "success");
+        }, 1000);
       }
       else{
-        console.error("Error:", error);
+        console.error("Error, No se ha podido registrar este producto, intentalo de nuevo");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: '¡Ocurrio un error, intentalo de nuevo!',
+          footer: ''
+        })
       }
     })
    
@@ -258,10 +266,7 @@ form.addEventListener("submit", (e) => {
     // Vaciar el formulario
     form.reset();
     // Ocultar la alerta después de 2 segundos
-    setTimeout(function () {
-      //document.getElementById("alert-success").style.display = "none";
-      Swal.fire("¡Registrado exitosamente!", "", "success");
-    }, 1000);
+    
   } else {
     // Mostrar las alerts de error
     for (let i = 0; i < errors.length; i++) {
