@@ -18,11 +18,11 @@ public class Actividades {
 	private Long id_Actividades;
 	@Column(nullable=false)
 	private String nom_actv;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String descrip_actv;
-	@Column(length = 500)
+	@Column(length = 5000)
 	private String resumen_actv;
-	@Column(length = 500)
+	@Column(length = 1000)
 	private String img_actv;
 	private double precio_actv;
 	public Actividades(String nom_actv, String descrip_actv, String img_actv, double precio_actv, String resumen_actv) { 
