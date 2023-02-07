@@ -41,7 +41,7 @@ public class ClientesService {
 	}//deleteClientes
 	
 	public Clientes addClientes(Clientes clientes) {
-		clientes.setPassword(passwordEncoder.encode(clientes.getPassword()));
+		clientes.setPassword(passwordEncoder.encode(clientes.getContr_cliente()));
 		return clientesRepository.save(clientes);
 	}//addClientes
 	
