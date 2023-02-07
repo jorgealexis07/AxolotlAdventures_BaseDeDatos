@@ -39,6 +39,7 @@ public class ClientesService {
 	}//deleteClientes
 	
 	public Clientes addClientes(Clientes clientes) {
+		clientes.setPassword(passwordEncoder.encode(clientes.getPassword()));
 		return clientesRepository.save(clientes);
 	}//addClientes
 	
