@@ -239,13 +239,16 @@ form.addEventListener("submit", (e) => {
     })
     .then((response) => response.json())
     .then((data) => {
-      if (data.status == 200) {
+      if (data.status==200) {
         console.log("Success:", data);
       }
-      
     })
     .catch((error) => {
       console.error("Error:", error);
+      setTimeout(function () {
+        //document.getElementById("alert-success").style.display = "none";
+        Swal.fire("¡Registrado exitosamente!", "", "success");
+      }, 1000);
     });
     
     //localStorage.removeItem("producto");
@@ -257,10 +260,8 @@ form.addEventListener("submit", (e) => {
     // Vaciar el formulario
     form.reset();
     // Ocultar la alerta después de 2 segundos
-    setTimeout(function () {
-      //document.getElementById("alert-success").style.display = "none";
-      Swal.fire("¡Registrado exitosamente!", "", "success");
-    }, 1000);
+    
+
   } else {
     // Mostrar las alerts de error
     for (let i = 0; i < errors.length; i++) {
