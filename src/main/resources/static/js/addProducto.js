@@ -241,14 +241,15 @@ form.addEventListener("submit", (e) => {
     .then((data) => {
       if (data.status==200) {
         console.log("Success:", data);
+        setTimeout(function () {
+          //document.getElementById("alert-success").style.display = "none";
+          Swal.fire("¡Registrado exitosamente!", "", "success");
+        }, 1000);
       }
     })
     .catch((error) => {
       console.error("Error:", error);
-      setTimeout(function () {
-        //document.getElementById("alert-success").style.display = "none";
-        Swal.fire("¡Registrado exitosamente!", "", "success");
-      }, 1000);
+      
     });
     
     //localStorage.removeItem("producto");
