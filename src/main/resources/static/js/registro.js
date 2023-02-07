@@ -79,10 +79,17 @@ btnEnviar.addEventListener("click", function (event) {
     inputTel.style.border = "solid green 2px";
     inputPassword.style.border = "solid green 2px";
     inputRPassword.style.border = "solid green 2px";
+    /* Swal.fire({
+      title: "¡Registro exitoso!",
+      icon: "success",
+      confirmButtonClass: "custom-confirm-button-class",
+    }); */
     Swal.fire({
       title: "¡Registro exitoso!",
       icon: "success",
       confirmButtonClass: "custom-confirm-button-class",
+      confirmButtonColor: "#e23d82",
+        imageUrl: '/fotos/logo22.png',
     });
     inputNombre.value = "";
     inputEmail.value = "";

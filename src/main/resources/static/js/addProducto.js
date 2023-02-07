@@ -239,7 +239,10 @@ form.addEventListener("submit", (e) => {
     })
     .then((response) => response.json())
     .then((data) => {
-      console.log("Success:", data);
+      if (data.status == 200) {
+        console.log("Success:", data);
+      }
+      
     })
     .catch((error) => {
       console.error("Error:", error);
