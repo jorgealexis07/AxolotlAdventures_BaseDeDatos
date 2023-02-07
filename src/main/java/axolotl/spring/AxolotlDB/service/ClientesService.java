@@ -14,6 +14,8 @@ public class ClientesService {
 
 	private final ClientesRepository clientesRepository;
 	@Autowired
+	private PasswordEncoder passwordEncoder;
+	@Autowired
 	public ClientesService(ClientesRepository clientesRepository) {
 		this.clientesRepository = clientesRepository;
 	}//Constructor
